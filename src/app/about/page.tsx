@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 
 export const metadata: Metadata = { title: "Our Story — Petal & Press" };
 
@@ -54,8 +55,8 @@ export default function AboutPage() {
         </div>
         <div className="relative h-72 w-full overflow-hidden rounded-3xl sm:h-96">
           <Image
-            src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1200&q=80&auto=format&fit=crop"
-            alt="A garden path lined with rose bushes leading to a fountain"
+            src={withBasePath("/images/lifestyle/about-workshop.jpg")}
+            alt="A 3D-printed floral bucket insert prototype on the studio workbench, next to fresh dahlias and another print in progress"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"

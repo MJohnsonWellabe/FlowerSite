@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ShopBrowser from "@/components/ShopBrowser";
-import { categories, getCategory, products } from "@/lib/products";
+import { ACCENT_OVERLAY, categories, getCategory, products } from "@/lib/products";
 
 type Params = { category: string };
 
@@ -40,7 +40,9 @@ export default async function CategoryPage({
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 px-5 text-center text-cream">
+        <div
+          className={`absolute inset-0 flex flex-col items-center justify-center px-5 text-center text-cream ${ACCENT_OVERLAY[cat.accent]}`}
+        >
           <h1 className="font-display text-3xl font-semibold sm:text-4xl">{cat.name}</h1>
           <p className="mt-2 max-w-lg text-sm text-cream/90 sm:text-base">{cat.tagline}</p>
         </div>

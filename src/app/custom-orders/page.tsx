@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 export default function CustomOrdersPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -77,8 +78,8 @@ export default function CustomOrdersPage() {
 
         <div className="relative h-72 overflow-hidden rounded-3xl lg:h-full">
           <Image
-            src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=1200&q=80&auto=format&fit=crop"
-            alt="A bouquet of rainbow-dyed roses"
+            src={withBasePath("/images/products/art-box-finished.jpg")}
+            alt="A custom lavender 3D-printed bouquet box filled with a finished flower arrangement"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"

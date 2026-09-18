@@ -16,6 +16,13 @@
   --color-terracotta: #c97a5b;
   --color-terracotta-dark: #a75f43;
   --color-blush: #f0dcd3;
+  --color-blush-dark: #d98fa3;
+  --color-lavender: #e5def0;
+  --color-lavender-dark: #9e88c4;
+  --color-butter: #f6f0de;
+  --color-butter-dark: #d8be5e;
+  --color-sky: #e5eef2;
+  --color-sky-dark: #7cb1cc;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
