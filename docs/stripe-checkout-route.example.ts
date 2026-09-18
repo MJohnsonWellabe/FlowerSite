@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 
-// TODO: Stripe Checkout integration point.
+// Stripe Checkout integration point — currently NOT wired into the app.
+//
+// This site is deployed as a static export (`output: "export"` in next.config.ts) to
+// GitHub Pages, which only serves static files and can't run API routes. To bring this
+// back: move this file to src/app/api/checkout/route.ts, remove `output: "export"` (and
+// the basePath/assetPrefix) from next.config.ts, and deploy to a host that runs server
+// code (Vercel, Netlify, Cloudflare Pages, etc.).
 //
 // Once you have a Stripe secret key:
 //   1. `npm install stripe`

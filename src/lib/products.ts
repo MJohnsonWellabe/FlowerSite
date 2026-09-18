@@ -6,6 +6,8 @@
 // once you're shooting your own prints — every field on Product is designed to be
 // replaced wholesale.
 
+import { withBasePath } from "@/lib/basePath";
+
 export type ProductColor = { name: string; hex: string };
 export type ProductImage = { src: string; alt: string };
 
@@ -48,7 +50,7 @@ const mood = (src: string, alt: string): ProductImage => ({
 // Local product imagery — real reference photos or icon-illustrations, both stored in
 // /public/images/products.
 const p = (file: string, alt: string): ProductImage => ({
-  src: `/images/products/${file}`,
+  src: withBasePath(`/images/products/${file}`),
   alt,
 });
 

@@ -54,10 +54,15 @@ export default function CheckoutPage() {
             <div className="rounded-xl bg-sand p-4 text-sm text-ink-soft">
               <p className="font-semibold text-ink">TODO: Stripe Checkout Session goes here</p>
               <p className="mt-1">
-                Integrate Stripe Checkout to securely collect payment information. Create an
-                API route (<code className="rounded bg-white px-1 py-0.5">/api/checkout</code>)
-                to generate a Checkout Session and redirect the customer to Stripe — see the
-                stub in <code className="rounded bg-white px-1 py-0.5">src/app/api/checkout/route.ts</code>.
+                Integrate Stripe Checkout to securely collect payment information. This site is
+                currently deployed as a static export to GitHub Pages, which can&apos;t run
+                server code — a reference API route is saved at{" "}
+                <code className="rounded bg-white px-1 py-0.5">
+                  docs/stripe-checkout-route.example.ts
+                </code>
+                . When you move to a host with server functions (Vercel, Netlify, etc.),
+                restore it as <code className="rounded bg-white px-1 py-0.5">src/app/api/checkout/route.ts</code>{" "}
+                to generate a Checkout Session and redirect the customer to Stripe.
               </p>
             </div>
             <button
